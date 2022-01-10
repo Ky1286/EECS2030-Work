@@ -1,0 +1,31 @@
+package junit_tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import model.Product;
+
+public class TestProduct {
+
+	@Test
+	public void test_product_1() {
+		Product p = new Product();
+		
+		assertNull(p.getModel());
+		
+		assertTrue(p.getFinish() == null);
+		assertFalse(p.getFinish() != null);
+		
+		assertTrue(p.getStorage() == 0);
+		assertEquals(0, p.getStorage());
+		
+		assertFalse(p.hasCellularConnectivity());
+		assertFalse(p.hasCellularConnectivity() == true);
+		assertTrue(p.hasCellularConnectivity() == false);
+		assertTrue(p.hasCellularConnectivity() != true);
+		assertTrue(!(p.hasCellularConnectivity() == true));
+		
+	}
+
+}
